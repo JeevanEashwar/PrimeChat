@@ -9,6 +9,7 @@ import SwiftUI
 
 struct NewMessageContainerView: View {
     @State private var messageText = ""
+    @ObservedObject var vm: ConversationListViewModal
 
     var body: some View {
         HStack {
@@ -18,6 +19,7 @@ struct NewMessageContainerView: View {
 
             Button(action: {
                 // Action for sending the message
+                AppManager.sendMessage(message: MessageRecord(timeStamp: Date(), message: messageText, senderEmail: AppManager.loggedInUser?.email ?? "", receiverEmail: vm.contact.emailId))
                 // Clear the TextField
                 messageText = ""
             }) {
@@ -36,7 +38,7 @@ struct NewMessageContainerView: View {
 
 struct NewMessageContainerView_Previews: PreviewProvider {
     static var previews: some View {
-        NewMessageContainerView()
+        NewMessageContainerView(vm: ConversationListViewModal(contact: Contact(emailId: "")))
             .previewLayout(.fixed(width: 400, height: 80))
     }
 }

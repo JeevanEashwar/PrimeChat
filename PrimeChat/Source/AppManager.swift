@@ -6,8 +6,10 @@
 //
 
 import Foundation
+
 import FirebaseCore
 import FirebaseAuth
+import Firebase
 
 /// A class to adapt external module methods with application methods
 class AppManager {
@@ -22,7 +24,7 @@ class AppManager {
 extension AppManager {
     
     /// Logged In user information - to be used in Profile section
-    var loggedInUser: User? {
+    static var loggedInUser: User? {
         Auth.auth().currentUser
     }
     
@@ -46,5 +48,48 @@ extension AppManager {
             return error.localizedDescription
         }
         return .LoginSuccess
+    }
+}
+
+
+/// Firebase FireStore methods
+typealias SendMessageCompletion = (Error?) -> Void
+extension AppManager {
+    static var dbManager: Firestore {
+        Firestore.firestore()
+    }
+    
+    static var messagesCollectionRef: CollectionReference {
+        dbManager.collection("MessagesCollection")
+    }
+    
+    static func sendMessage(message: MessageRecord, completion: SendMessageCompletion? = nil) {
+        messagesCollectionRef.addDocument(data: message.dictionary, completion: completion)
+    }
+    
+    static func getMessages(toEmail: String) async -> [MessageRecord]? {
+        let fromEmail: String = loggedInUser?.email ?? ""
+        do {
+            let snapshot = try await messagesCollectionRef
+                .whereField("senderEmail", in: [fromEmail, toEmail])
+                .whereField("receiverEmail", in: [fromEmail, toEmail])
+                .getDocuments()
+            
+            let messages = mapSnapshotToMessageRecords(snapshot: snapshot)
+            return messages
+            
+        } catch (let error) {
+            print(error.localizedDescription)
+        }
+        return []
+    }
+    
+    static func mapSnapshotToMessageRecords(snapshot: QuerySnapshot) -> [MessageRecord] {
+        var result: [MessageRecord] = []
+        for document in snapshot.documents {
+            let dictionary = document.data()
+            result.append(MessageRecord(from: dictionary))
+        }
+        return result
     }
 }

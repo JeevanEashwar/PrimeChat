@@ -11,8 +11,8 @@ struct MessageRecord: Codable, Identifiable {
     var documentId: String?
     var timeStamp: Date
     var message: String
-    var sender: String
-    var receiver: String
+    var senderEmail: String
+    var receiverEmail: String
     
     var id: String {
         documentId ?? UUID().uuidString
@@ -25,13 +25,18 @@ extension MessageRecord {
         return [
             "id": id,
             "message": message,
-            "receiver": receiver,
-            "sender": sender,
+            "receiverEmail": receiverEmail,
+            "senderEmail": senderEmail,
             "timeStamp": timeStamp
         ]
     }
     
-//    init(from data: Data) throws {
-//        // TODO:
-//    }
+    init(from dictionary: [String: Any]) {
+        let timeStamp: Date = dictionary["timeStamp"] as? Date ?? Date()
+        let message: String = dictionary["message"] as? String ?? ""
+        let senderEmail: String = dictionary["senderEmail"] as? String ?? ""
+        let receiverEmail: String = dictionary["receiverEmail"] as? String ?? ""
+        let documentId: String = dictionary["id"] as? String ?? ""
+        self = MessageRecord(documentId: documentId, timeStamp: timeStamp, message: message, senderEmail: senderEmail, receiverEmail: receiverEmail)
+    }
 }

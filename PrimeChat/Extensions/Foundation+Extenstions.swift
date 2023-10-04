@@ -23,3 +23,12 @@ extension String {
         self.count >= minimum
     }
 }
+
+
+extension Date {
+    func formattedString() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "hh:mm a"
+        return dateFormatter.string(from: self)
+    }
+}

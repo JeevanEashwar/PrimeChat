@@ -8,12 +8,22 @@
 import SwiftUI
 
 struct ConversationListView: View {
+    @StateObject var vm: ConversationListViewModal
     var body: some View {
         List {
-            MessageCardView(message: "Hi there!", timestamp: "11:45 AM", alignment: .received)
-                .listRowSeparator(.hidden)
-            MessageCardView(message: "This is a very long test string to test multiple line view in conversation list view as a sent message without the need of actual message string. This is just to simulate and only for the demonstaration puprposes Not to be confused as an actual message", timestamp: "10:30 AM", alignment: .sent)
-                .listRowSeparator(.hidden)
+            let messagesSorted = vm.messages.sorted { lhs, rhs in
+                lhs.timeStamp > rhs.timeStamp
+            }
+            ForEach(messagesSorted, id: \.self.id) { item in
+                let alignment = (item.receiverEmail == vm.contact.emailId) ? MessageAlignment.sent : MessageAlignment.received
+                MessageCardView(message: item.message, timestamp: item.timeStamp.formattedString(), alignment: alignment)
+                    .listRowSeparator(.hidden)
+            }
+        }
+        .onAppear(){
+            Task {
+                await vm.loadConversations()
+            }
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
@@ -25,12 +35,12 @@ struct ConversationListView: View {
         }
         .toolbarRole(.editor)
         Spacer()
-        NewMessageContainerView()
+        NewMessageContainerView(vm: vm)
     }
 }
 
 struct ConversationListView_Previews: PreviewProvider {
     static var previews: some View {
-        ConversationListView()
+        ConversationListView(vm: ConversationListViewModal(contact: Contact(emailId: "")))
     }
 }

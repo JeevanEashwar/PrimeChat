@@ -14,6 +14,7 @@
 		842531F42ACD11C50039699B /* PrimeChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842531F32ACD11C50039699B /* PrimeChatTests.swift */; };
 		842531FE2ACD11C50039699B /* PrimeChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842531FD2ACD11C50039699B /* PrimeChatUITests.swift */; };
 		842532002ACD11C50039699B /* PrimeChatUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842531FF2ACD11C50039699B /* PrimeChatUITestsLaunchTests.swift */; };
+		846A54F82ACDDB69007F2418 /* ConversationListViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846A54F72ACDDB69007F2418 /* ConversationListViewModal.swift */; };
 		8473A8722ACD1366005D84C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8473A8712ACD1366005D84C7 /* GoogleService-Info.plist */; };
 		8473A8752ACD14BE005D84C7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8473A8742ACD14BE005D84C7 /* FirebaseAuth */; };
 		8473A8772ACD14BE005D84C7 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8473A8762ACD14BE005D84C7 /* FirebaseFirestore */; };
@@ -71,6 +72,7 @@
 		842531F92ACD11C50039699B /* PrimeChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrimeChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		842531FD2ACD11C50039699B /* PrimeChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeChatUITests.swift; sourceTree = "<group>"; };
 		842531FF2ACD11C50039699B /* PrimeChatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeChatUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		846A54F72ACDDB69007F2418 /* ConversationListViewModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationListViewModal.swift; sourceTree = "<group>"; };
 		8473A8712ACD1366005D84C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8473A87E2ACD1669005D84C7 /* UIKit+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extensions.swift"; sourceTree = "<group>"; };
 		8473A8802ACD18ED005D84C7 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 				8473A89B2ACD7B80005D84C7 /* ChatsListView.swift */,
 				8473A8A72ACD8680005D84C7 /* MessageCardView.swift */,
 				8473A8A92ACD88A8005D84C7 /* ConversationListView.swift */,
+				846A54F72ACDDB69007F2418 /* ConversationListViewModal.swift */,
 				8473A8AB2ACD9A1C005D84C7 /* NewMessageContainerView.swift */,
 				8473A8B02ACDB358005D84C7 /* AddContactView.swift */,
 				8473A8B22ACDB3C6005D84C7 /* AddContactViewModal.swift */,
@@ -418,6 +421,7 @@
 			files = (
 				8473A88A2ACD2EC4005D84C7 /* ChatBubbleView.swift in Sources */,
 				842531E52ACD11C40039699B /* ContentView.swift in Sources */,
+				846A54F82ACDDB69007F2418 /* ConversationListViewModal.swift in Sources */,
 				842531E32ACD11C40039699B /* PrimeChatApp.swift in Sources */,
 				8473A8A02ACD7BB5005D84C7 /* ProfileSettingsView.swift in Sources */,
 				8473A8A82ACD8680005D84C7 /* MessageCardView.swift in Sources */,

@@ -11,18 +11,17 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var appState: AppState
     var body: some View {
-        HomeContainerView()
-//        switch appState.authScreen {
-//        case .Login:
-//            LoginView()
-//                .environmentObject(appState)
-//        case .SignUp:
-//            SignUpView()
-//                .environmentObject(appState)
-//        case .HomeContainer:
-//            HomeContainerView()
-//                .environmentObject(appState)
-//        }
+        switch appState.authScreen {
+        case .Login:
+            LoginView()
+                .environmentObject(appState)
+        case .SignUp:
+            SignUpView()
+                .environmentObject(appState)
+        case .HomeContainer:
+            HomeContainerView()
+                .environmentObject(appState)
+        }
     }
 }
 
