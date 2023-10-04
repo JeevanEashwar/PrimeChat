@@ -15,6 +15,11 @@
 		842531FE2ACD11C50039699B /* PrimeChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842531FD2ACD11C50039699B /* PrimeChatUITests.swift */; };
 		842532002ACD11C50039699B /* PrimeChatUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842531FF2ACD11C50039699B /* PrimeChatUITestsLaunchTests.swift */; };
 		8473A8722ACD1366005D84C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8473A8712ACD1366005D84C7 /* GoogleService-Info.plist */; };
+		8473A8752ACD14BE005D84C7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 8473A8742ACD14BE005D84C7 /* FirebaseAuth */; };
+		8473A8772ACD14BE005D84C7 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8473A8762ACD14BE005D84C7 /* FirebaseFirestore */; };
+		8473A8792ACD14BE005D84C7 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 8473A8782ACD14BE005D84C7 /* FirebaseMessaging */; };
+		8473A87B2ACD14BE005D84C7 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 8473A87A2ACD14BE005D84C7 /* FirebaseStorage */; };
+		8473A87F2ACD1669005D84C7 /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473A87E2ACD1669005D84C7 /* UIKit+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +51,7 @@
 		842531FD2ACD11C50039699B /* PrimeChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeChatUITests.swift; sourceTree = "<group>"; };
 		842531FF2ACD11C50039699B /* PrimeChatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeChatUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8473A8712ACD1366005D84C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8473A87E2ACD1669005D84C7 /* UIKit+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8473A8792ACD14BE005D84C7 /* FirebaseMessaging in Frameworks */,
+				8473A87B2ACD14BE005D84C7 /* FirebaseStorage in Frameworks */,
+				8473A8752ACD14BE005D84C7 /* FirebaseAuth in Frameworks */,
+				8473A8772ACD14BE005D84C7 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +106,7 @@
 		842531E12ACD11C40039699B /* PrimeChat */ = {
 			isa = PBXGroup;
 			children = (
+				8473A87D2ACD1653005D84C7 /* Extensions */,
 				8473A8712ACD1366005D84C7 /* GoogleService-Info.plist */,
 				842531E22ACD11C40039699B /* PrimeChatApp.swift */,
 				842531E42ACD11C40039699B /* ContentView.swift */,
@@ -130,6 +141,14 @@
 			path = PrimeChatUITests;
 			sourceTree = "<group>";
 		};
+		8473A87D2ACD1653005D84C7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8473A87E2ACD1669005D84C7 /* UIKit+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +165,12 @@
 			dependencies = (
 			);
 			name = PrimeChat;
+			packageProductDependencies = (
+				8473A8742ACD14BE005D84C7 /* FirebaseAuth */,
+				8473A8762ACD14BE005D84C7 /* FirebaseFirestore */,
+				8473A8782ACD14BE005D84C7 /* FirebaseMessaging */,
+				8473A87A2ACD14BE005D84C7 /* FirebaseStorage */,
+			);
 			productName = PrimeChat;
 			productReference = 842531DF2ACD11C40039699B /* PrimeChat.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +243,9 @@
 				Base,
 			);
 			mainGroup = 842531D62ACD11C40039699B;
+			packageReferences = (
+				8473A8732ACD14BE005D84C7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 842531E02ACD11C40039699B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -263,6 +291,7 @@
 			files = (
 				842531E52ACD11C40039699B /* ContentView.swift in Sources */,
 				842531E32ACD11C40039699B /* PrimeChatApp.swift in Sources */,
+				8473A87F2ACD1669005D84C7 /* UIKit+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +610,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8473A8732ACD14BE005D84C7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8473A8742ACD14BE005D84C7 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8473A8732ACD14BE005D84C7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		8473A8762ACD14BE005D84C7 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8473A8732ACD14BE005D84C7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		8473A8782ACD14BE005D84C7 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8473A8732ACD14BE005D84C7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		8473A87A2ACD14BE005D84C7 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8473A8732ACD14BE005D84C7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 842531D72ACD11C40039699B /* Project object */;
 }
