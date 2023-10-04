@@ -26,6 +26,9 @@
 		8473A88A2ACD2EC4005D84C7 /* ChatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473A8892ACD2EC4005D84C7 /* ChatBubbleView.swift */; };
 		8473A88E2ACD3CF4005D84C7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473A88D2ACD3CF4005D84C7 /* LoginView.swift */; };
 		8473A8902ACD3F54005D84C7 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473A88F2ACD3F54005D84C7 /* AppState.swift */; };
+		8473A8922ACD6153005D84C7 /* SignUpViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473A8912ACD6153005D84C7 /* SignUpViewModal.swift */; };
+		8473A8942ACD6BF1005D84C7 /* LoginViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473A8932ACD6BF1005D84C7 /* LoginViewModal.swift */; };
+		8473A8972ACD6E5B005D84C7 /* HomeContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473A8962ACD6E5B005D84C7 /* HomeContainerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,9 @@
 		8473A8892ACD2EC4005D84C7 /* ChatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleView.swift; sourceTree = "<group>"; };
 		8473A88D2ACD3CF4005D84C7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		8473A88F2ACD3F54005D84C7 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		8473A8912ACD6153005D84C7 /* SignUpViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModal.swift; sourceTree = "<group>"; };
+		8473A8932ACD6BF1005D84C7 /* LoginViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModal.swift; sourceTree = "<group>"; };
+		8473A8962ACD6E5B005D84C7 /* HomeContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeContainerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +170,7 @@
 		8473A8842ACD2204005D84C7 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				8473A8952ACD6E3E005D84C7 /* HomeScreen */,
 				8473A8882ACD2EB2005D84C7 /* Helpers */,
 				8473A8852ACD2437005D84C7 /* AuthenticationScreens */,
 				8473A8802ACD18ED005D84C7 /* AppManager.swift */,
@@ -178,7 +185,9 @@
 			isa = PBXGroup;
 			children = (
 				8473A8862ACD245E005D84C7 /* SignUpView.swift */,
+				8473A8912ACD6153005D84C7 /* SignUpViewModal.swift */,
 				8473A88D2ACD3CF4005D84C7 /* LoginView.swift */,
+				8473A8932ACD6BF1005D84C7 /* LoginViewModal.swift */,
 			);
 			path = AuthenticationScreens;
 			sourceTree = "<group>";
@@ -189,6 +198,14 @@
 				8473A8892ACD2EC4005D84C7 /* ChatBubbleView.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8473A8952ACD6E3E005D84C7 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8473A8962ACD6E5B005D84C7 /* HomeContainerView.swift */,
+			);
+			path = HomeScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,10 +353,13 @@
 				842531E32ACD11C40039699B /* PrimeChatApp.swift in Sources */,
 				8473A8902ACD3F54005D84C7 /* AppState.swift in Sources */,
 				8473A8832ACD1C32005D84C7 /* Foundation+Extenstions.swift in Sources */,
+				8473A8972ACD6E5B005D84C7 /* HomeContainerView.swift in Sources */,
 				8473A87F2ACD1669005D84C7 /* UIKit+Extensions.swift in Sources */,
 				8473A8872ACD245E005D84C7 /* SignUpView.swift in Sources */,
 				8473A88E2ACD3CF4005D84C7 /* LoginView.swift in Sources */,
+				8473A8922ACD6153005D84C7 /* SignUpViewModal.swift in Sources */,
 				8473A8812ACD18ED005D84C7 /* AppManager.swift in Sources */,
+				8473A8942ACD6BF1005D84C7 /* LoginViewModal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

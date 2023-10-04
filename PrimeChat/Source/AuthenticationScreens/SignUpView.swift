@@ -10,11 +10,7 @@ import SwiftUI
 struct SignUpView: View {
     
     @EnvironmentObject var appState: AppState
-    
-    @State private var email: String = ""
-    @State private var password: String = ""
-    @State private var isSignUpEnabled: Bool = false
-    @State private var screenAppeared: Bool = false
+    @StateObject var vm: SignUpViewModal = SignUpViewModal()
     
     var body: some View {
         ZStack {
@@ -24,19 +20,19 @@ struct SignUpView: View {
                         header: Text("Sign Up Information")
                             .foregroundColor(Color(.accentColor))
                     ) {
-                        TextField("Email", text: $email)
+                        TextField("Email", text: $vm.email)
                             .autocapitalization(.none)
                             .keyboardType(.emailAddress)
                             .foregroundColor(Color(.accentColor))
                         
-                        SecureField("Password (minimum 4 characters)", text: $password)
+                        SecureField("Password (minimum 4 characters)", text: $vm.password)
                             .foregroundColor(Color(.accentColor))
                     }
                 }
                 
                 HStack {
                     Button(action: {
-                        appState.authScreen = .Login
+                        self.appState.authScreen = .Login
                     }) {
                         Text("Login")
                             .frame(width: 120, height: 44)
@@ -48,14 +44,9 @@ struct SignUpView: View {
                     
                     Button(action: {
                         Task {
-                            let status = await AppManager.signup(email, password)
-                            if status != .SignUpSuccess {
-                                // Show error
-                            } else {
-                                // Move to login screen
-                                self.email = ""
-                                self.password = ""
-                                appState.authScreen = .Login
+                            let flag = await vm.signUp()
+                            if flag {
+                                self.appState.authScreen = .Login
                             }
                         }
                     }) {
@@ -67,20 +58,17 @@ struct SignUpView: View {
                             .shadow(radius: 5)
                             .padding()
                     }
-                    .disabled(!isSignUpEnabled)
+                    .disabled(!vm.isSignUpEnabled)
                 }
             }
             .onAppear() {
                 withAnimation(Animation.linear(duration: 1)) {
-                    self.screenAppeared.toggle()
+                    self.vm.screenAppeared.toggle()
                 }
-            }
-            .onReceive([self.email, self.password].publisher) { _ in
-                self.isSignUpEnabled = self.email.isValidEmail() && self.password.hasMinimumNumberOfCharacters(4)
             }
             .padding()
             
-            if screenAppeared {
+            if vm.screenAppeared {
                 ChatBubbleView(size: 120)
                     .transition(.scale)
             }

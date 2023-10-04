@@ -10,6 +10,7 @@ import SwiftUI
 enum AuthenticationScreen {
     case Login
     case SignUp
+    case HomeContainer
 }
 
 class AppState: ObservableObject {
