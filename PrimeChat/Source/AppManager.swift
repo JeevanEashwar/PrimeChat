@@ -9,18 +9,24 @@ import Foundation
 import FirebaseCore
 import FirebaseAuth
 
+/// A class to adapt external module methods with application methods
 class AppManager {
+    
+    /// Initializations and configurations of external modules
     static func configure() {
         FirebaseApp.configure()
     }
 }
 
+/// Firebase authentication methods
 extension AppManager {
     
+    /// Logged In user information - to be used in Profile section
     var loggedInUser: User? {
         Auth.auth().currentUser
     }
     
+    /// Register the user using email and password
     @discardableResult
     static func signup(_ email: String, _ password: String) async -> String {
         do {
@@ -31,6 +37,7 @@ extension AppManager {
         return .SignUpSuccess
     }
     
+    /// Log in the user using email and password
     @discardableResult
     static func login(_ email: String, _ password: String) async -> String {
         do {

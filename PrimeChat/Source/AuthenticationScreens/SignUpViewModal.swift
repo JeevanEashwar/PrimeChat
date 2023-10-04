@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 import Combine
 
+/// ViewModal to handle business logic of SignUpView
 class SignUpViewModal: ObservableObject {
     
     @Published var email: String = ""

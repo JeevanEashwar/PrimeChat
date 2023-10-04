@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// - Sign Up: Register using email and password
 struct SignUpView: View {
     
     @EnvironmentObject var appState: AppState

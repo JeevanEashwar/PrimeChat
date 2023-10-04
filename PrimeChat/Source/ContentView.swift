@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// Main ContainerView which is the parent view for all the application View's 
 struct ContentView: View {
     @EnvironmentObject var appState: AppState
     var body: some View {

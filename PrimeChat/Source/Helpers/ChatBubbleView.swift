@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// A fancy imageview to use as a background to the app's screens as a theme
 struct ChatBubbleView: View {
     @State var size: CGFloat
     var body: some View {

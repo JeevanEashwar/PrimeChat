@@ -22,6 +22,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 }
 
 
+/// Entry point to the application
 @main
 struct PrimeChatApp: App {
     

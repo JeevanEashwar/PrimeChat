@@ -9,6 +9,7 @@ import Foundation
 import Combine
 import SwiftUI
 
+/// ViewModal to handle business logic of LoginView
 class LoginViewModal: ObservableObject {
     @Published var email: String = ""
     @Published var password: String = ""

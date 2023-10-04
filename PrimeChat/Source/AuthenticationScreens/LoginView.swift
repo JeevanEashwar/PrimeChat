@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// - Login: User can enter email and password to log into a session
 struct LoginView: View {
     
     @EnvironmentObject var appState: AppState
