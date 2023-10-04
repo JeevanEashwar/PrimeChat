@@ -11,11 +11,11 @@ struct ChatsListView: View {
     var body: some View {
         NavigationView {
             List {
-                NavigationLink(destination: Text("Chat Detail View")) {
-                    Text("Chat Item 1")
+                NavigationLink(destination: ConversationListView()) {
+                    FaceCard(face: FaceModal(title: "Jeevan", subtitle: "Hi there!"))
                 }
-                NavigationLink(destination: Text("Chat Detail View")) {
-                    Text("Chat Item 2")
+                NavigationLink(destination: ConversationListView()) {
+                    FaceCard(face: FaceModal(title: "Eashwar", subtitle: "Lorem ipsum"))
                 }
             }
             .navigationTitle("Chats")

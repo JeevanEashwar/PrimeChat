@@ -32,6 +32,11 @@
 		8473A89C2ACD7B80005D84C7 /* ChatsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473A89B2ACD7B80005D84C7 /* ChatsListView.swift */; };
 		8473A89E2ACD7B9D005D84C7 /* StatusListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473A89D2ACD7B9D005D84C7 /* StatusListView.swift */; };
 		8473A8A02ACD7BB5005D84C7 /* ProfileSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473A89F2ACD7BB5005D84C7 /* ProfileSettingsView.swift */; };
+		8473A8A22ACD80D4005D84C7 /* FaceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473A8A12ACD80D4005D84C7 /* FaceCard.swift */; };
+		8473A8A42ACD8465005D84C7 /* FaceModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473A8A32ACD8465005D84C7 /* FaceModal.swift */; };
+		8473A8A82ACD8680005D84C7 /* MessageCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473A8A72ACD8680005D84C7 /* MessageCardView.swift */; };
+		8473A8AA2ACD88A8005D84C7 /* ConversationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473A8A92ACD88A8005D84C7 /* ConversationListView.swift */; };
+		8473A8AC2ACD9A1C005D84C7 /* NewMessageContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473A8AB2ACD9A1C005D84C7 /* NewMessageContainerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +81,11 @@
 		8473A89B2ACD7B80005D84C7 /* ChatsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsListView.swift; sourceTree = "<group>"; };
 		8473A89D2ACD7B9D005D84C7 /* StatusListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusListView.swift; sourceTree = "<group>"; };
 		8473A89F2ACD7BB5005D84C7 /* ProfileSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingsView.swift; sourceTree = "<group>"; };
+		8473A8A12ACD80D4005D84C7 /* FaceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceCard.swift; sourceTree = "<group>"; };
+		8473A8A32ACD8465005D84C7 /* FaceModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceModal.swift; sourceTree = "<group>"; };
+		8473A8A72ACD8680005D84C7 /* MessageCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCardView.swift; sourceTree = "<group>"; };
+		8473A8A92ACD88A8005D84C7 /* ConversationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationListView.swift; sourceTree = "<group>"; };
+		8473A8AB2ACD9A1C005D84C7 /* NewMessageContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageContainerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,9 +220,11 @@
 			isa = PBXGroup;
 			children = (
 				8473A8962ACD6E5B005D84C7 /* HomeContainerView.swift */,
+				8473A8A12ACD80D4005D84C7 /* FaceCard.swift */,
 				8473A8982ACD7B43005D84C7 /* Chats */,
 				8473A8992ACD7B4B005D84C7 /* Statuses */,
 				8473A89A2ACD7B57005D84C7 /* ProfileSettings */,
+				8473A8A32ACD8465005D84C7 /* FaceModal.swift */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -221,6 +233,9 @@
 			isa = PBXGroup;
 			children = (
 				8473A89B2ACD7B80005D84C7 /* ChatsListView.swift */,
+				8473A8A72ACD8680005D84C7 /* MessageCardView.swift */,
+				8473A8A92ACD88A8005D84C7 /* ConversationListView.swift */,
+				8473A8AB2ACD9A1C005D84C7 /* NewMessageContainerView.swift */,
 			);
 			path = Chats;
 			sourceTree = "<group>";
@@ -385,14 +400,19 @@
 				842531E52ACD11C40039699B /* ContentView.swift in Sources */,
 				842531E32ACD11C40039699B /* PrimeChatApp.swift in Sources */,
 				8473A8A02ACD7BB5005D84C7 /* ProfileSettingsView.swift in Sources */,
+				8473A8A82ACD8680005D84C7 /* MessageCardView.swift in Sources */,
 				8473A8902ACD3F54005D84C7 /* AppState.swift in Sources */,
 				8473A89E2ACD7B9D005D84C7 /* StatusListView.swift in Sources */,
+				8473A8A22ACD80D4005D84C7 /* FaceCard.swift in Sources */,
 				8473A8832ACD1C32005D84C7 /* Foundation+Extenstions.swift in Sources */,
+				8473A8AA2ACD88A8005D84C7 /* ConversationListView.swift in Sources */,
 				8473A89C2ACD7B80005D84C7 /* ChatsListView.swift in Sources */,
 				8473A8972ACD6E5B005D84C7 /* HomeContainerView.swift in Sources */,
 				8473A87F2ACD1669005D84C7 /* UIKit+Extensions.swift in Sources */,
+				8473A8AC2ACD9A1C005D84C7 /* NewMessageContainerView.swift in Sources */,
 				8473A8872ACD245E005D84C7 /* SignUpView.swift in Sources */,
 				8473A88E2ACD3CF4005D84C7 /* LoginView.swift in Sources */,
+				8473A8A42ACD8465005D84C7 /* FaceModal.swift in Sources */,
 				8473A8922ACD6153005D84C7 /* SignUpViewModal.swift in Sources */,
 				8473A8812ACD18ED005D84C7 /* AppManager.swift in Sources */,
 				8473A8942ACD6BF1005D84C7 /* LoginViewModal.swift in Sources */,
