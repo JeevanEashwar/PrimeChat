@@ -37,6 +37,10 @@
 		8473A8A82ACD8680005D84C7 /* MessageCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473A8A72ACD8680005D84C7 /* MessageCardView.swift */; };
 		8473A8AA2ACD88A8005D84C7 /* ConversationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473A8A92ACD88A8005D84C7 /* ConversationListView.swift */; };
 		8473A8AC2ACD9A1C005D84C7 /* NewMessageContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473A8AB2ACD9A1C005D84C7 /* NewMessageContainerView.swift */; };
+		8473A8AF2ACD9CE1005D84C7 /* MessageRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473A8AE2ACD9CE1005D84C7 /* MessageRecord.swift */; };
+		8473A8B12ACDB358005D84C7 /* AddContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473A8B02ACDB358005D84C7 /* AddContactView.swift */; };
+		8473A8B32ACDB3C6005D84C7 /* AddContactViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473A8B22ACDB3C6005D84C7 /* AddContactViewModal.swift */; };
+		8473A8B52ACDB48C005D84C7 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473A8B42ACDB48C005D84C7 /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +90,10 @@
 		8473A8A72ACD8680005D84C7 /* MessageCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCardView.swift; sourceTree = "<group>"; };
 		8473A8A92ACD88A8005D84C7 /* ConversationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationListView.swift; sourceTree = "<group>"; };
 		8473A8AB2ACD9A1C005D84C7 /* NewMessageContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageContainerView.swift; sourceTree = "<group>"; };
+		8473A8AE2ACD9CE1005D84C7 /* MessageRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRecord.swift; sourceTree = "<group>"; };
+		8473A8B02ACDB358005D84C7 /* AddContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactView.swift; sourceTree = "<group>"; };
+		8473A8B22ACDB3C6005D84C7 /* AddContactViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewModal.swift; sourceTree = "<group>"; };
+		8473A8B42ACDB48C005D84C7 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +194,7 @@
 		8473A8842ACD2204005D84C7 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				8473A8AD2ACD9CD7005D84C7 /* Modals */,
 				8473A8952ACD6E3E005D84C7 /* HomeScreen */,
 				8473A8882ACD2EB2005D84C7 /* Helpers */,
 				8473A8852ACD2437005D84C7 /* AuthenticationScreens */,
@@ -236,6 +245,8 @@
 				8473A8A72ACD8680005D84C7 /* MessageCardView.swift */,
 				8473A8A92ACD88A8005D84C7 /* ConversationListView.swift */,
 				8473A8AB2ACD9A1C005D84C7 /* NewMessageContainerView.swift */,
+				8473A8B02ACDB358005D84C7 /* AddContactView.swift */,
+				8473A8B22ACDB3C6005D84C7 /* AddContactViewModal.swift */,
 			);
 			path = Chats;
 			sourceTree = "<group>";
@@ -254,6 +265,15 @@
 				8473A89F2ACD7BB5005D84C7 /* ProfileSettingsView.swift */,
 			);
 			path = ProfileSettings;
+			sourceTree = "<group>";
+		};
+		8473A8AD2ACD9CD7005D84C7 /* Modals */ = {
+			isa = PBXGroup;
+			children = (
+				8473A8AE2ACD9CE1005D84C7 /* MessageRecord.swift */,
+				8473A8B42ACDB48C005D84C7 /* Contact.swift */,
+			);
+			path = Modals;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,14 +428,18 @@
 				8473A8AA2ACD88A8005D84C7 /* ConversationListView.swift in Sources */,
 				8473A89C2ACD7B80005D84C7 /* ChatsListView.swift in Sources */,
 				8473A8972ACD6E5B005D84C7 /* HomeContainerView.swift in Sources */,
+				8473A8B52ACDB48C005D84C7 /* Contact.swift in Sources */,
 				8473A87F2ACD1669005D84C7 /* UIKit+Extensions.swift in Sources */,
 				8473A8AC2ACD9A1C005D84C7 /* NewMessageContainerView.swift in Sources */,
 				8473A8872ACD245E005D84C7 /* SignUpView.swift in Sources */,
+				8473A8B12ACDB358005D84C7 /* AddContactView.swift in Sources */,
 				8473A88E2ACD3CF4005D84C7 /* LoginView.swift in Sources */,
 				8473A8A42ACD8465005D84C7 /* FaceModal.swift in Sources */,
 				8473A8922ACD6153005D84C7 /* SignUpViewModal.swift in Sources */,
 				8473A8812ACD18ED005D84C7 /* AppManager.swift in Sources */,
 				8473A8942ACD6BF1005D84C7 /* LoginViewModal.swift in Sources */,
+				8473A8B32ACDB3C6005D84C7 /* AddContactViewModal.swift in Sources */,
+				8473A8AF2ACD9CE1005D84C7 /* MessageRecord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

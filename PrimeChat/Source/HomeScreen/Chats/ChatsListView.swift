@@ -8,17 +8,25 @@
 import SwiftUI
 
 struct ChatsListView: View {
+    @StateObject private var vm = AddContactViewModal(contacts: [])
+    
     var body: some View {
         NavigationView {
             List {
-                NavigationLink(destination: ConversationListView()) {
-                    FaceCard(face: FaceModal(title: "Jeevan", subtitle: "Hi there!"))
-                }
-                NavigationLink(destination: ConversationListView()) {
-                    FaceCard(face: FaceModal(title: "Eashwar", subtitle: "Lorem ipsum"))
+                ForEach(vm.contacts, id: \.self.emailId) { item in
+                    NavigationLink(destination: ConversationListView()) {
+                        FaceCard(face: FaceModal(title: item.displayName ?? item.emailId, subtitle: item.recentMessage ?? ""))
+                    }
                 }
             }
             .navigationTitle("Chats")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink(destination: AddContactView(vm: vm)) {
+                        Image(systemName: "plus")
+                    }
+                }
+            }
         }
     }
 }
