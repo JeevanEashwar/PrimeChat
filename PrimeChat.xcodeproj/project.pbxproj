@@ -20,6 +20,12 @@
 		8473A8792ACD14BE005D84C7 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 8473A8782ACD14BE005D84C7 /* FirebaseMessaging */; };
 		8473A87B2ACD14BE005D84C7 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 8473A87A2ACD14BE005D84C7 /* FirebaseStorage */; };
 		8473A87F2ACD1669005D84C7 /* UIKit+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473A87E2ACD1669005D84C7 /* UIKit+Extensions.swift */; };
+		8473A8812ACD18ED005D84C7 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473A8802ACD18ED005D84C7 /* AppManager.swift */; };
+		8473A8832ACD1C32005D84C7 /* Foundation+Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473A8822ACD1C32005D84C7 /* Foundation+Extenstions.swift */; };
+		8473A8872ACD245E005D84C7 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473A8862ACD245E005D84C7 /* SignUpView.swift */; };
+		8473A88A2ACD2EC4005D84C7 /* ChatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473A8892ACD2EC4005D84C7 /* ChatBubbleView.swift */; };
+		8473A88E2ACD3CF4005D84C7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473A88D2ACD3CF4005D84C7 /* LoginView.swift */; };
+		8473A8902ACD3F54005D84C7 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473A88F2ACD3F54005D84C7 /* AppState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +58,12 @@
 		842531FF2ACD11C50039699B /* PrimeChatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeChatUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8473A8712ACD1366005D84C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8473A87E2ACD1669005D84C7 /* UIKit+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extensions.swift"; sourceTree = "<group>"; };
+		8473A8802ACD18ED005D84C7 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		8473A8822ACD1C32005D84C7 /* Foundation+Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundation+Extenstions.swift"; sourceTree = "<group>"; };
+		8473A8862ACD245E005D84C7 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		8473A8892ACD2EC4005D84C7 /* ChatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubbleView.swift; sourceTree = "<group>"; };
+		8473A88D2ACD3CF4005D84C7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		8473A88F2ACD3F54005D84C7 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,10 +118,9 @@
 		842531E12ACD11C40039699B /* PrimeChat */ = {
 			isa = PBXGroup;
 			children = (
+				8473A8842ACD2204005D84C7 /* Source */,
 				8473A87D2ACD1653005D84C7 /* Extensions */,
 				8473A8712ACD1366005D84C7 /* GoogleService-Info.plist */,
-				842531E22ACD11C40039699B /* PrimeChatApp.swift */,
-				842531E42ACD11C40039699B /* ContentView.swift */,
 				842531E62ACD11C50039699B /* Assets.xcassets */,
 				842531E82ACD11C50039699B /* Preview Content */,
 			);
@@ -145,8 +156,39 @@
 			isa = PBXGroup;
 			children = (
 				8473A87E2ACD1669005D84C7 /* UIKit+Extensions.swift */,
+				8473A8822ACD1C32005D84C7 /* Foundation+Extenstions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8473A8842ACD2204005D84C7 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				8473A8882ACD2EB2005D84C7 /* Helpers */,
+				8473A8852ACD2437005D84C7 /* AuthenticationScreens */,
+				8473A8802ACD18ED005D84C7 /* AppManager.swift */,
+				8473A88F2ACD3F54005D84C7 /* AppState.swift */,
+				842531E22ACD11C40039699B /* PrimeChatApp.swift */,
+				842531E42ACD11C40039699B /* ContentView.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		8473A8852ACD2437005D84C7 /* AuthenticationScreens */ = {
+			isa = PBXGroup;
+			children = (
+				8473A8862ACD245E005D84C7 /* SignUpView.swift */,
+				8473A88D2ACD3CF4005D84C7 /* LoginView.swift */,
+			);
+			path = AuthenticationScreens;
+			sourceTree = "<group>";
+		};
+		8473A8882ACD2EB2005D84C7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8473A8892ACD2EC4005D84C7 /* ChatBubbleView.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,9 +331,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8473A88A2ACD2EC4005D84C7 /* ChatBubbleView.swift in Sources */,
 				842531E52ACD11C40039699B /* ContentView.swift in Sources */,
 				842531E32ACD11C40039699B /* PrimeChatApp.swift in Sources */,
+				8473A8902ACD3F54005D84C7 /* AppState.swift in Sources */,
+				8473A8832ACD1C32005D84C7 /* Foundation+Extenstions.swift in Sources */,
 				8473A87F2ACD1669005D84C7 /* UIKit+Extensions.swift in Sources */,
+				8473A8872ACD245E005D84C7 /* SignUpView.swift in Sources */,
+				8473A88E2ACD3CF4005D84C7 /* LoginView.swift in Sources */,
+				8473A8812ACD18ED005D84C7 /* AppManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,6 +505,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -485,6 +534,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

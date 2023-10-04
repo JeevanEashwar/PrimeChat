@@ -24,15 +24,15 @@ extension UIColor {
         self.init(red: red, green: green, blue: blue, alpha: alpha)
     }
     
-    var primaryColor: UIColor {
+    static var primaryColor: UIColor {
         .init(hex: "#FF6F61")
     }
     
-    var secondaryColor: UIColor {
+    static var secondaryColor: UIColor {
         .init(hex: "#F2F2F2")
     }
     
-    var accentColor: UIColor {
+    static var accentColor: UIColor {
         .init(hex: "#2E4057")
     }
 }
