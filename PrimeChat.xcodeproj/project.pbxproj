@@ -1,0 +1,586 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		842531E32ACD11C40039699B /* PrimeChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842531E22ACD11C40039699B /* PrimeChatApp.swift */; };
+		842531E52ACD11C40039699B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842531E42ACD11C40039699B /* ContentView.swift */; };
+		842531E72ACD11C50039699B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842531E62ACD11C50039699B /* Assets.xcassets */; };
+		842531EA2ACD11C50039699B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842531E92ACD11C50039699B /* Preview Assets.xcassets */; };
+		842531F42ACD11C50039699B /* PrimeChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842531F32ACD11C50039699B /* PrimeChatTests.swift */; };
+		842531FE2ACD11C50039699B /* PrimeChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842531FD2ACD11C50039699B /* PrimeChatUITests.swift */; };
+		842532002ACD11C50039699B /* PrimeChatUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842531FF2ACD11C50039699B /* PrimeChatUITestsLaunchTests.swift */; };
+		8473A8722ACD1366005D84C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8473A8712ACD1366005D84C7 /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		842531F02ACD11C50039699B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 842531D72ACD11C40039699B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 842531DE2ACD11C40039699B;
+			remoteInfo = PrimeChat;
+		};
+		842531FA2ACD11C50039699B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 842531D72ACD11C40039699B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 842531DE2ACD11C40039699B;
+			remoteInfo = PrimeChat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		842531DF2ACD11C40039699B /* PrimeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrimeChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		842531E22ACD11C40039699B /* PrimeChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeChatApp.swift; sourceTree = "<group>"; };
+		842531E42ACD11C40039699B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		842531E62ACD11C50039699B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		842531E92ACD11C50039699B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		842531EF2ACD11C50039699B /* PrimeChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrimeChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		842531F32ACD11C50039699B /* PrimeChatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeChatTests.swift; sourceTree = "<group>"; };
+		842531F92ACD11C50039699B /* PrimeChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrimeChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		842531FD2ACD11C50039699B /* PrimeChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeChatUITests.swift; sourceTree = "<group>"; };
+		842531FF2ACD11C50039699B /* PrimeChatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeChatUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8473A8712ACD1366005D84C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		842531DC2ACD11C40039699B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		842531EC2ACD11C50039699B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		842531F62ACD11C50039699B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		842531D62ACD11C40039699B = {
+			isa = PBXGroup;
+			children = (
+				842531E12ACD11C40039699B /* PrimeChat */,
+				842531F22ACD11C50039699B /* PrimeChatTests */,
+				842531FC2ACD11C50039699B /* PrimeChatUITests */,
+				842531E02ACD11C40039699B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		842531E02ACD11C40039699B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				842531DF2ACD11C40039699B /* PrimeChat.app */,
+				842531EF2ACD11C50039699B /* PrimeChatTests.xctest */,
+				842531F92ACD11C50039699B /* PrimeChatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		842531E12ACD11C40039699B /* PrimeChat */ = {
+			isa = PBXGroup;
+			children = (
+				8473A8712ACD1366005D84C7 /* GoogleService-Info.plist */,
+				842531E22ACD11C40039699B /* PrimeChatApp.swift */,
+				842531E42ACD11C40039699B /* ContentView.swift */,
+				842531E62ACD11C50039699B /* Assets.xcassets */,
+				842531E82ACD11C50039699B /* Preview Content */,
+			);
+			path = PrimeChat;
+			sourceTree = "<group>";
+		};
+		842531E82ACD11C50039699B /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				842531E92ACD11C50039699B /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		842531F22ACD11C50039699B /* PrimeChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				842531F32ACD11C50039699B /* PrimeChatTests.swift */,
+			);
+			path = PrimeChatTests;
+			sourceTree = "<group>";
+		};
+		842531FC2ACD11C50039699B /* PrimeChatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				842531FD2ACD11C50039699B /* PrimeChatUITests.swift */,
+				842531FF2ACD11C50039699B /* PrimeChatUITestsLaunchTests.swift */,
+			);
+			path = PrimeChatUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		842531DE2ACD11C40039699B /* PrimeChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 842532032ACD11C50039699B /* Build configuration list for PBXNativeTarget "PrimeChat" */;
+			buildPhases = (
+				842531DB2ACD11C40039699B /* Sources */,
+				842531DC2ACD11C40039699B /* Frameworks */,
+				842531DD2ACD11C40039699B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PrimeChat;
+			productName = PrimeChat;
+			productReference = 842531DF2ACD11C40039699B /* PrimeChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		842531EE2ACD11C50039699B /* PrimeChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 842532062ACD11C50039699B /* Build configuration list for PBXNativeTarget "PrimeChatTests" */;
+			buildPhases = (
+				842531EB2ACD11C50039699B /* Sources */,
+				842531EC2ACD11C50039699B /* Frameworks */,
+				842531ED2ACD11C50039699B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				842531F12ACD11C50039699B /* PBXTargetDependency */,
+			);
+			name = PrimeChatTests;
+			productName = PrimeChatTests;
+			productReference = 842531EF2ACD11C50039699B /* PrimeChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		842531F82ACD11C50039699B /* PrimeChatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 842532092ACD11C50039699B /* Build configuration list for PBXNativeTarget "PrimeChatUITests" */;
+			buildPhases = (
+				842531F52ACD11C50039699B /* Sources */,
+				842531F62ACD11C50039699B /* Frameworks */,
+				842531F72ACD11C50039699B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				842531FB2ACD11C50039699B /* PBXTargetDependency */,
+			);
+			name = PrimeChatUITests;
+			productName = PrimeChatUITests;
+			productReference = 842531F92ACD11C50039699B /* PrimeChatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		842531D72ACD11C40039699B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					842531DE2ACD11C40039699B = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					842531EE2ACD11C50039699B = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 842531DE2ACD11C40039699B;
+					};
+					842531F82ACD11C50039699B = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 842531DE2ACD11C40039699B;
+					};
+				};
+			};
+			buildConfigurationList = 842531DA2ACD11C40039699B /* Build configuration list for PBXProject "PrimeChat" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 842531D62ACD11C40039699B;
+			productRefGroup = 842531E02ACD11C40039699B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				842531DE2ACD11C40039699B /* PrimeChat */,
+				842531EE2ACD11C50039699B /* PrimeChatTests */,
+				842531F82ACD11C50039699B /* PrimeChatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		842531DD2ACD11C40039699B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				842531EA2ACD11C50039699B /* Preview Assets.xcassets in Resources */,
+				842531E72ACD11C50039699B /* Assets.xcassets in Resources */,
+				8473A8722ACD1366005D84C7 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		842531ED2ACD11C50039699B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		842531F72ACD11C50039699B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		842531DB2ACD11C40039699B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				842531E52ACD11C40039699B /* ContentView.swift in Sources */,
+				842531E32ACD11C40039699B /* PrimeChatApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		842531EB2ACD11C50039699B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				842531F42ACD11C50039699B /* PrimeChatTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		842531F52ACD11C50039699B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				842532002ACD11C50039699B /* PrimeChatUITestsLaunchTests.swift in Sources */,
+				842531FE2ACD11C50039699B /* PrimeChatUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		842531F12ACD11C50039699B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 842531DE2ACD11C40039699B /* PrimeChat */;
+			targetProxy = 842531F02ACD11C50039699B /* PBXContainerItemProxy */;
+		};
+		842531FB2ACD11C50039699B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 842531DE2ACD11C40039699B /* PrimeChat */;
+			targetProxy = 842531FA2ACD11C50039699B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		842532012ACD11C50039699B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		842532022ACD11C50039699B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		842532042ACD11C50039699B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PrimeChat/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.PrimeChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		842532052ACD11C50039699B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PrimeChat/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.PrimeChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		842532072ACD11C50039699B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.PrimeChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrimeChat.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PrimeChat";
+			};
+			name = Debug;
+		};
+		842532082ACD11C50039699B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.PrimeChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PrimeChat.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PrimeChat";
+			};
+			name = Release;
+		};
+		8425320A2ACD11C50039699B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.PrimeChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PrimeChat;
+			};
+			name = Debug;
+		};
+		8425320B2ACD11C50039699B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.personal.PrimeChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PrimeChat;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		842531DA2ACD11C40039699B /* Build configuration list for PBXProject "PrimeChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				842532012ACD11C50039699B /* Debug */,
+				842532022ACD11C50039699B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		842532032ACD11C50039699B /* Build configuration list for PBXNativeTarget "PrimeChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				842532042ACD11C50039699B /* Debug */,
+				842532052ACD11C50039699B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		842532062ACD11C50039699B /* Build configuration list for PBXNativeTarget "PrimeChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				842532072ACD11C50039699B /* Debug */,
+				842532082ACD11C50039699B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		842532092ACD11C50039699B /* Build configuration list for PBXNativeTarget "PrimeChatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8425320A2ACD11C50039699B /* Debug */,
+				8425320B2ACD11C50039699B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 842531D72ACD11C40039699B /* Project object */;
+}
