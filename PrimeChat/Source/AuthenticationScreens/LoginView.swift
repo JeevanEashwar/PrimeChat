@@ -14,6 +14,7 @@ struct LoginView: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var isSignUpEnabled: Bool = false
+    @State private var screenAppeared: Bool = false
     
     var body: some View {
         ZStack {
@@ -53,6 +54,7 @@ struct LoginView: View {
                             } else {
                                 self.email = ""
                                 self.password = ""
+    
                                 // Login success & Move to Main screen
                             }
                         }
@@ -71,9 +73,17 @@ struct LoginView: View {
             .onReceive([self.email, self.password].publisher) { _ in
                 self.isSignUpEnabled = self.email.isValidEmail() && self.password.hasMinimumNumberOfCharacters(4)
             }
+            .onAppear() {
+                withAnimation(Animation.linear(duration: 1)) {
+                    self.screenAppeared.toggle()
+                }
+            }
             .padding()
             
-            ChatBubbleView(size: 120)
+            if screenAppeared {
+                ChatBubbleView(size: 120)
+                    .transition(.scale)
+            }
         }
     }
     
