@@ -45,6 +45,7 @@
 		84EC536A2ACEA3E900287A7E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 84EC53692ACEA3E900287A7E /* FirebaseStorage */; };
 		84EC536C2ACEA41B00287A7E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 84EC536B2ACEA41B00287A7E /* FirebaseFirestore */; };
 		84EC53702ACEA45000287A7E /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 84EC536F2ACEA45000287A7E /* FirebaseFunctions */; };
+		84EC53722ACEEA8900287A7E /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC53712ACEEA8900287A7E /* ProfileImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		84EC53602ACEA19900287A7E /* AppManager+Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppManager+Authentication.swift"; sourceTree = "<group>"; };
 		84EC53622ACEA1FB00287A7E /* AppManager+Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppManager+Messages.swift"; sourceTree = "<group>"; };
 		84EC53642ACEA23800287A7E /* AppManager+Contacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppManager+Contacts.swift"; sourceTree = "<group>"; };
+		84EC53712ACEEA8900287A7E /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -270,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				8473A89F2ACD7BB5005D84C7 /* ProfileSettingsView.swift */,
+				84EC53712ACEEA8900287A7E /* ProfileImageView.swift */,
 			);
 			path = ProfileSettings;
 			sourceTree = "<group>";
@@ -474,6 +477,7 @@
 				8473A88E2ACD3CF4005D84C7 /* LoginView.swift in Sources */,
 				8473A8A42ACD8465005D84C7 /* FaceModal.swift in Sources */,
 				8473A8922ACD6153005D84C7 /* SignUpViewModal.swift in Sources */,
+				84EC53722ACEEA8900287A7E /* ProfileImageView.swift in Sources */,
 				8473A8812ACD18ED005D84C7 /* AppManager.swift in Sources */,
 				84EC53632ACEA1FB00287A7E /* AppManager+Messages.swift in Sources */,
 				8473A8942ACD6BF1005D84C7 /* LoginViewModal.swift in Sources */,

@@ -9,15 +9,39 @@ import SwiftUI
 
 struct ProfileSettingsView: View {
     @EnvironmentObject var appState: AppState
+    @State var displayName: String = "Jeevan"
     var body: some View {
         NavigationView {
             VStack {
+                ProfileImageView(imageUrl: URL(string: "https://www.gstatic.com/webp/gallery3/1.sm.png"))
+                HStack {
+                    TextField("Type your message", text: $displayName)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding(.horizontal)
+                    Button(action: {
+                        // Action for saving the display name
+                        
+                    }) {
+                        Image(systemName: "checkmark")
+                            .resizable()
+                            .tint(Color(UIColor.primaryColor))
+                            .frame(width: 20, height: 20)
+                    }
+                    .padding(.trailing)
+                }
+                .padding()
+                .background(Color(UIColor.systemBackground))
+                .cornerRadius(20)
+                .shadow(radius: 2)
                 List {
                     NavigationLink(destination: Text("Profile Detail View")) {
-                        Text("Profile Setting 1")
+                        Text("Chats")
                     }
                     NavigationLink(destination: Text("Profile Detail View")) {
-                        Text("Profile Setting 2")
+                        Text("Contact support")
+                    }
+                    NavigationLink(destination: Text("Profile Detail View")) {
+                        Text("Notifications")
                     }
                 }
                 .navigationTitle("Profile Settings")
