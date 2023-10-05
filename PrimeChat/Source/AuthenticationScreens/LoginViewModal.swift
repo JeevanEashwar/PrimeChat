@@ -11,8 +11,8 @@ import SwiftUI
 
 /// ViewModal to handle business logic of LoginView
 class LoginViewModal: ObservableObject {
-    @Published var email: String = "september@gmail.com"
-    @Published var password: String = "september"
+    @Published var email: String = ""
+    @Published var password: String = ""
     @Published var isSignUpEnabled: Bool = false
     @Published var screenAppeared: Bool = false
     

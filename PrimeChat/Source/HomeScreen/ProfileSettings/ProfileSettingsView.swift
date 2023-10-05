@@ -8,19 +8,30 @@
 import SwiftUI
 
 struct ProfileSettingsView: View {
+    
     @EnvironmentObject var appState: AppState
-    @State var displayName: String = "Jeevan"
+    
+    @State var displayName: String = AppManager.userDisplayName
+    @State private var selectedImageUrl: URL? = AppManager.photoUrl
+    @State private var isImagePickerPresented: Bool = false
+    
     var body: some View {
         NavigationView {
             VStack {
-                ProfileImageView(imageUrl: URL(string: "https://www.gstatic.com/webp/gallery3/1.sm.png"))
+                Button {
+                    isImagePickerPresented.toggle()
+                } label: {
+                    ProfileImageView(imageUrl: selectedImageUrl)
+                }
+                .sheet(isPresented: $isImagePickerPresented) {
+                    ImagePicker(selectedImageUrl: $selectedImageUrl)
+                }
                 HStack {
                     TextField("Type your message", text: $displayName)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding(.horizontal)
                     Button(action: {
-                        // Action for saving the display name
-                        
+                        AppManager.updateUserProfile(name: displayName)
                     }) {
                         Image(systemName: "checkmark")
                             .resizable()

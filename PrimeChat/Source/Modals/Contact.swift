@@ -10,7 +10,7 @@ import SwiftUI
 
 struct Contact {
     var emailId: String
-    var image: Image? = nil
+    var imageUrl: URL? = nil
     var recentMessage: String? = nil
     var displayName: String? = nil
 }
@@ -18,6 +18,7 @@ struct Contact {
 extension Contact {
     init(from dictionary: [String: Any]) {
         let emailId: String = dictionary["contactEmail"] as? String ?? ""
-        self = Contact(emailId: emailId)
+        let urlString: String = dictionary["photoUrl"] as? String ?? ""
+        self = Contact(emailId: emailId, imageUrl: URL(string: urlString))
     }
 }

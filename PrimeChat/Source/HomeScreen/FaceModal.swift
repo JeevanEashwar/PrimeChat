@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct FaceModal {
-    var image: Image = Image(systemName: "person.fill")
+    var imageUrl: URL? = nil
     var title: String
     var subtitle: String
 }

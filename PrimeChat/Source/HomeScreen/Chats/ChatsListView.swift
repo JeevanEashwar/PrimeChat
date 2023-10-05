@@ -16,7 +16,13 @@ struct ChatsListView: View {
                 ForEach(vm.contacts, id: \.self.emailId) { item in
                     let cvm = ConversationListViewModal(contact: item)
                     NavigationLink(destination: ConversationListView(vm: cvm)) {
-                        FaceCard(face: FaceModal(title: item.displayName ?? item.emailId, subtitle: item.recentMessage ?? ""))
+                        FaceCard(face:
+                                    FaceModal(
+                                        imageUrl: item.imageUrl,
+                                        title: item.displayName ?? item.emailId,
+                                        subtitle: item.recentMessage ?? ""
+                                    )
+                        )
                     }
                 }
             }

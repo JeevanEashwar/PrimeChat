@@ -48,6 +48,28 @@ extension AppManager {
             } else {
                 print("User contact added successfully!")
             }
+            addPhotoUrlToContact(contactEmail: contactEmail)
+        }
+    }
+    
+    static func addPhotoUrlToContact(contactEmail: String) {
+        if let username = contactEmail.components(separatedBy: "@").first {
+            AppManager.contactImagePhotoUrl(fileName: username) { url in
+                if let urlString = url?.absoluteString {
+                    userContactsRef?.document(contactEmail).setData(
+                        [
+                            "contactEmail": contactEmail,
+                            "photoUrl": urlString
+                        ]
+                    ) { error in
+                        if let error = error {
+                            print("Error adding user contact photoUrl: \(error)")
+                        } else {
+                            print("User contact photoUrl added successfully!")
+                        }
+                    }
+                }
+            }
         }
     }
     
@@ -55,6 +77,7 @@ extension AppManager {
         var result: [Contact] = []
         for document in snapshot.documents {
             let dictionary = document.data()
+            print(dictionary)
             result.append(Contact(from: dictionary))
         }
         return result

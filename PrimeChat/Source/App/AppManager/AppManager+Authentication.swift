@@ -20,6 +20,36 @@ extension AppManager {
         loggedInUser?.email ?? ""
     }
     
+    static var userDisplayName: String {
+        if let displayName = loggedInUser?.displayName {
+            return displayName
+        } else if let username = currentUserEmail.components(separatedBy: "@").first {
+            return username
+        } else {
+            return "Guest-" + UUID().uuidString
+        }
+    }
+    
+    static var photoUrl: URL? {
+        loggedInUser?.photoURL
+    }
+    
+    static func updateUserProfile(name: String? = nil, photoUrl: URL? = nil) {
+        let changeRequest = loggedInUser?.createProfileChangeRequest()
+        if let name = name {
+            changeRequest?.displayName = name
+        } else if let photoUrl = photoUrl {
+            changeRequest?.photoURL = photoUrl
+        }
+        changeRequest?.commitChanges { error in
+            if let error = error {
+                print("Error updating display name: \(error.localizedDescription)")
+            } else {
+                print("Display name updated successfully to \(name)")
+            }
+        }
+    }
+    
     /// Register the user using email and password
     @discardableResult
     static func signup(_ email: String, _ password: String) async -> String {

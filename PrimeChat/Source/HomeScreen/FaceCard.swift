@@ -14,13 +14,7 @@ struct FaceCard: View {
     var body: some View {
         HStack(spacing: 10) {
             // Person's image (placeholder image)
-            face.image
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 40, height: 40)
-                .clipShape(Circle())
-                .tint(Color(.accentColor))
-
+            ContactImageView(imageUrl: face.imageUrl)
             // Display name and short detail description
             VStack(alignment: .leading, spacing: 5) {
                 Text(face.title)
