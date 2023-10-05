@@ -41,4 +41,15 @@ extension AppManager {
         }
         return .LoginSuccess
     }
+    
+    /// Register the user using email and password
+    @discardableResult
+    static func logout() -> String {
+        do {
+            try Auth.auth().signOut()
+        } catch(let error) {
+            return error.localizedDescription
+        }
+        return .LogOutSuccess
+    }
 }

@@ -31,10 +31,12 @@ class AddContactViewModal: ObservableObject {
         AppManager.addContact(contactEmail: email)
     }
     
-    func loadContacts() async {
-        let contactsLoaded = await AppManager.loadContacts()
-        DispatchQueue.main.async {
-            self.contacts = contactsLoaded
+    func loadContacts() {
+        Task {
+            let contactsLoaded = await AppManager.loadContacts()
+            DispatchQueue.main.async {
+                self.contacts = contactsLoaded
+            }
         }
     }
 }

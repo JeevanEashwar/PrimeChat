@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeContainerView: View {
+    @EnvironmentObject var appState: AppState
     init() {
         UITabBar.appearance().tintColor = UIColor.primaryColor
     }
@@ -30,6 +31,7 @@ struct HomeContainerView: View {
                     Text("Settings")
                 }
                 .accentColor(Color(.accentColor))
+                .environmentObject(appState)
         }
     }
 }

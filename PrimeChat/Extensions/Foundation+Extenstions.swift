@@ -10,6 +10,7 @@ import Foundation
 extension String {
     static let SignUpSuccess = "User signed up successfully"
     static let LoginSuccess = "User logged in successfully"
+    static let LogOutSuccess = "User logged out successfully"
     
     /// This method checks if the string is a valid email using regex. april@gmail.com is a valid format for email.
     func isValidEmail() -> Bool {

@@ -33,7 +33,7 @@ struct MessageCardView: View {
                 HStack {
                     Spacer()
                     Text(timestamp)
-                        .font(.footnote)
+                        .font(.caption2)
                         .padding(.horizontal)
                         .foregroundColor(.white)
                 }

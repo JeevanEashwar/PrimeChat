@@ -14,7 +14,8 @@ extension AppManager {
         dbManager.collection("ContactsCollection")
     }
     
-    static var userContactsRef: CollectionReference {
+    static var userContactsRef: CollectionReference? {
+        if currentUserEmail.isEmpty { return nil }
         let ref = contactsRef.document(currentUserEmail)
         ref.setData(["userEmail": currentUserEmail], merge: true) { error in
             if let error = error {
@@ -28,10 +29,10 @@ extension AppManager {
     
     static func loadContacts() async -> [Contact] {
         do {
-            let snapshot = try await userContactsRef.getDocuments()
-            let contacts = mapSnapshotToContacts(snapshot: snapshot)
-            return contacts
-            
+            if let snapshot = try await userContactsRef?.getDocuments() {
+                let contacts = mapSnapshotToContacts(snapshot: snapshot)
+                return contacts
+            }
         } catch (let error) {
             print(error.localizedDescription)
         }
@@ -41,7 +42,7 @@ extension AppManager {
     static func addContact(contactEmail: String) {
         // Get the existing contacts array and append the new contact
         // Add a document with contactEmail in the userContacts subcollection
-        userContactsRef.document(contactEmail).setData(["contactEmail": contactEmail]) { error in
+        userContactsRef?.document(contactEmail).setData(["contactEmail": contactEmail]) { error in
             if let error = error {
                 print("Error adding user contact: \(error)")
             } else {

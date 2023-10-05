@@ -21,9 +21,7 @@ struct ChatsListView: View {
                 }
             }
             .onAppear() {
-                Task {
-                    await vm.loadContacts()
-                }
+                self.vm.loadContacts()
             }
             .navigationTitle("Chats")
             .toolbar {
