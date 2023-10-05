@@ -19,5 +19,5 @@ enum AuthenticationScreen {
 
 /// Managed applicaition state 
 class AppState: ObservableObject {
-    @Published var authScreen: AuthenticationScreen = .SignUp
+    @Published var authScreen: AuthenticationScreen = .Login
 }

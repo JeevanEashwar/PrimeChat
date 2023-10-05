@@ -200,10 +200,7 @@
 				8473A8952ACD6E3E005D84C7 /* HomeScreen */,
 				8473A8882ACD2EB2005D84C7 /* Helpers */,
 				8473A8852ACD2437005D84C7 /* AuthenticationScreens */,
-				8473A8802ACD18ED005D84C7 /* AppManager.swift */,
-				8473A88F2ACD3F54005D84C7 /* AppState.swift */,
-				842531E22ACD11C40039699B /* PrimeChatApp.swift */,
-				842531E42ACD11C40039699B /* ContentView.swift */,
+				84EC535E2ACE8C4F00287A7E /* App */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -277,6 +274,17 @@
 				8473A8B42ACDB48C005D84C7 /* Contact.swift */,
 			);
 			path = Modals;
+			sourceTree = "<group>";
+		};
+		84EC535E2ACE8C4F00287A7E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8473A8802ACD18ED005D84C7 /* AppManager.swift */,
+				8473A88F2ACD3F54005D84C7 /* AppState.swift */,
+				842531E22ACD11C40039699B /* PrimeChatApp.swift */,
+				842531E42ACD11C40039699B /* ContentView.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

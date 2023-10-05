@@ -14,3 +14,10 @@ struct Contact {
     var recentMessage: String? = nil
     var displayName: String? = nil
 }
+
+extension Contact {
+    init(from dictionary: [String: Any]) {
+        let emailId: String = dictionary["contactEmail"] as? String ?? ""
+        self = Contact(emailId: emailId)
+    }
+}

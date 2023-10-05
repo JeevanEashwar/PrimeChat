@@ -30,9 +30,7 @@ class SignUpViewModal: ObservableObject {
     
     
     func signUp() async -> Bool {
-        print("signUp clicked")
         let status = await AppManager.signup(email, password)
-        print(status)
         if status != .SignUpSuccess {
             // Show error
             return false

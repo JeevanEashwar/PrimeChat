@@ -12,7 +12,7 @@ struct ConversationListView: View {
     var body: some View {
         List {
             let messagesSorted = vm.messages.sorted { lhs, rhs in
-                lhs.timeStamp > rhs.timeStamp
+                lhs.timeStamp < rhs.timeStamp
             }
             ForEach(messagesSorted, id: \.self.id) { item in
                 let alignment = (item.receiverEmail == vm.contact.emailId) ? MessageAlignment.sent : MessageAlignment.received
@@ -30,7 +30,7 @@ struct ConversationListView: View {
                 Image(systemName: "person")
             }
             ToolbarItem(placement: .principal) {
-                Text("Jeevan")
+                Text(vm.contact.displayName ?? vm.contact.emailId)
             }
         }
         .toolbarRole(.editor)

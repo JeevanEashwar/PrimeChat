@@ -22,6 +22,11 @@ extension String {
     func hasMinimumNumberOfCharacters(_ minimum: UInt8) -> Bool {
         self.count >= minimum
     }
+    
+    /// "yyyy-MM-dd HH:mm:ss.SSSSSSZ" String to Date
+    func toDate(using format: DateFormatter = .customFormat) -> Date? {
+        return format.date(from: self)
+    }
 }
 
 
@@ -31,4 +36,14 @@ extension Date {
         dateFormatter.dateFormat = "hh:mm a"
         return dateFormatter.string(from: self)
     }
+}
+
+extension DateFormatter {
+    static let customFormat: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSSSSSZ"
+        formatter.locale = Locale(identifier: "en_US_POSIX") // Set locale to ensure correct parsing
+        formatter.timeZone = TimeZone(secondsFromGMT: 0) // Set the appropriate time zone here if needed
+        return formatter
+    }()
 }

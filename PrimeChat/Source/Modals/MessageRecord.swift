@@ -32,11 +32,11 @@ extension MessageRecord {
     }
     
     init(from dictionary: [String: Any]) {
-        let timeStamp: Date = dictionary["timeStamp"] as? Date ?? Date()
+        let timeStamp = AppManager.getDateFromFIRTimeStamp(dictionary: dictionary)
         let message: String = dictionary["message"] as? String ?? ""
         let senderEmail: String = dictionary["senderEmail"] as? String ?? ""
         let receiverEmail: String = dictionary["receiverEmail"] as? String ?? ""
         let documentId: String = dictionary["id"] as? String ?? ""
-        self = MessageRecord(documentId: documentId, timeStamp: timeStamp, message: message, senderEmail: senderEmail, receiverEmail: receiverEmail)
+        self = MessageRecord(documentId: documentId, timeStamp: timeStamp ?? Date(), message: message, senderEmail: senderEmail, receiverEmail: receiverEmail)
     }
 }

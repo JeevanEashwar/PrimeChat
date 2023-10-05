@@ -20,6 +20,11 @@ struct ChatsListView: View {
                     }
                 }
             }
+            .onAppear() {
+                Task {
+                    await vm.loadContacts()
+                }
+            }
             .navigationTitle("Chats")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
