@@ -1,3 +1,4 @@
+
 # PrimeChat: Your Ultimate Messaging App for iOS
 
 PrimeChat is a secure, user-friendly messaging app designed for iOS devices. With PrimeChat, you can connect with friends and family, chat in real-time, update your status, and customize your profile settings effortlessly. This README.md provides comprehensive information about the app's features, installation guide, and usage instructions.
@@ -28,20 +29,16 @@ PrimeChat is a secure, user-friendly messaging app designed for iOS devices. Wit
 
 ## Screenshots
 
-![Login Screen](/screenshots/login_screen.png)
 *Login Screen*
-
-![Chat Conversation](/screenshots/chat_conversation.png)
+<img src="/screenshots/login_screen.png" alt="Login Screen" width="300"/>
 *Chat Conversation*
-
-![Status Updates](/screenshots/status_updates.png)
+<img src="/screenshots/chat_conversation.png" alt="Chat Conversation" width="300"/>
 *Status Updates*
-
-![Profile Settings](/screenshots/profile_settings.png)
+<img src="/screenshots/status_updates.png" alt="Status Updates" width="300"/>
 *Profile settings*
-
-![Chats List](/screenshots/chat_list.png)
+<img src="/screenshots/chat_conversation.png" alt="Profile settings" width="300"/>
 *Chats list*
+<img src="/screenshots/status_updates.png" alt="Chats list" width="300"/>
 
 
 ## Installation
