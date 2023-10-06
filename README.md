@@ -29,16 +29,11 @@ PrimeChat is a secure, user-friendly messaging app designed for iOS devices. Wit
 
 ## Screenshots
 
-*Login Screen*
-<img src="/screenshots/login_screen.png" alt="Login Screen" width="300"/>
-*Chat Conversation*
-<img src="/screenshots/chat_conversation.png" alt="Chat Conversation" width="300"/>
-*Status Updates*
-<img src="/screenshots/status_updates.png" alt="Status Updates" width="300"/>
-*Profile settings*
-<img src="/screenshots/chat_conversation.png" alt="Profile settings" width="300"/>
-*Chats list*
-<img src="/screenshots/status_updates.png" alt="Chats list" width="300"/>
+<img src="/screenshots/login_screen.png" alt="Login Screen" width="200"/>
+<img src="/screenshots/chat_conversation.png" alt="Chat Conversation" width="200"/>
+<img src="/screenshots/status_updates.png" alt="Status Updates" width="200"/>
+<img src="/screenshots/chat_conversation.png" alt="Profile settings" width="200"/>
+<img src="/screenshots/status_updates.png" alt="Chats list" width="200"/>
 
 
 ## Installation
