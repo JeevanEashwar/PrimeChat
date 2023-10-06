@@ -27,6 +27,7 @@ struct FaceCard: View {
             }
             Spacer() // Add Spacer to push the content to the leading edge
         }
+        .frame(height: 44)
         .background(Color.white) // Set the background color of the card
         .cornerRadius(10)
     }
@@ -34,6 +35,6 @@ struct FaceCard: View {
 
 struct ChatFaceCard_Previews: PreviewProvider {
     static var previews: some View {
-        FaceCard(face: FaceModal(title: "Jeevan", subtitle: "Hi there!"))
+        FaceCard(face: FaceModal(imageUrl: URL(string: "https://firebasestorage.googleapis.com:443/v0/b/primechat-9a005.appspot.com/o/statusImages%2F98AA47CB-CBBB-49CB-9B89-52A28F9DD2E4.jpg?alt=media&token=de413831-c491-4b37-905e-cfa4389cff72"), title: "Jeevan", subtitle: "Hi there!"))
     }
 }

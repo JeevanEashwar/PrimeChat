@@ -19,6 +19,16 @@ class AppManager {
 }
 
 extension AppManager {
+    
+    static func saveImageURL(photoUrl: URL? = nil, imageType: ImageType) {
+        switch imageType {
+        case .DisplayPicture:
+            updateUserProfile(photoUrl: photoUrl)
+        case .Status:
+            uploadStatusImageUrl(photoUrl: photoUrl)
+        }
+    }
+    
     static func getDateFromFIRTimeStamp(dictionary: [String: Any]) -> Date? {
         if let ts = dictionary["timeStamp"] as? Timestamp {
             let timestampInSeconds = TimeInterval(ts.seconds)

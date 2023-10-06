@@ -19,6 +19,14 @@ extension AppManager {
         storageRef.child("userProfileImages")
     }
     
+    static private var statusCollectionRef: StorageReference {
+        storageRef.child("statusImages")
+    }
+    
+    static private var statusImageRef: StorageReference {
+        statusCollectionRef.child("\(UUID().uuidString).jpg")
+    }
+    
     static private func imageRef(filename: String) -> StorageReference {
         userProfileImagesRef.child("\(filename).jpg")
     }
@@ -31,7 +39,7 @@ extension AppManager {
         }
     }
     
-    static func uploadImageToFirebaseStorage(image: UIImage, completion: @escaping (Result<URL, Error>) -> Void) {
+    static func uploadImageToFirebaseStorage(image: UIImage, imageType: ImageType, completion: @escaping (Result<URL, Error>) -> Void) {
         guard let imageData = image.jpegData(compressionQuality: 0.5) else {
             completion(.failure(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Failed to convert image to data"])))
             return
@@ -40,7 +48,15 @@ extension AppManager {
         let metadata = StorageMetadata()
         metadata.contentType = "image/jpeg"
         
-        profileImageRef.putData(imageData, metadata: metadata) { (metadata, error) in
+        var ref: StorageReference
+        switch imageType {
+        case .DisplayPicture:
+            ref = profileImageRef
+        case .Status:
+            ref = statusImageRef
+        }
+        
+        ref.putData(imageData, metadata: metadata) { (metadata, error) in
             guard let _ = metadata else {
                 if let error = error {
                     completion(.failure(error))
@@ -50,7 +66,7 @@ extension AppManager {
                 return
             }
             
-            profileImageRef.downloadURL { (url, error) in
+            ref.downloadURL { (url, error) in
                 if let url = url {
                     completion(.success(url))
                 } else {

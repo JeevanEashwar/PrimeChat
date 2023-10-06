@@ -7,8 +7,14 @@
 
 import SwiftUI
 
+enum ImageType {
+    case DisplayPicture
+    case Status
+}
 struct ImagePicker: UIViewControllerRepresentable {
+    
     @Binding var selectedImageUrl: URL?
+    var imageType: ImageType
     @Environment(\.presentationMode) private var presentationMode
 
     class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -20,10 +26,10 @@ struct ImagePicker: UIViewControllerRepresentable {
 
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
             if let selectedImage = info[.originalImage] as? UIImage {
-                AppManager.uploadImageToFirebaseStorage(image: selectedImage) { result in
+                AppManager.uploadImageToFirebaseStorage(image: selectedImage, imageType: self.parent.imageType) { result in
                     switch result {
                     case .success(let success):
-                        AppManager.updateUserProfile(photoUrl: success)
+                        AppManager.saveImageURL(photoUrl: success, imageType: self.parent.imageType)
                         DispatchQueue.main.async {
                             self.parent.selectedImageUrl = success
                         }

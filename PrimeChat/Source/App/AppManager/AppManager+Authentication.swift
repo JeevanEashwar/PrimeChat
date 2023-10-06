@@ -45,7 +45,7 @@ extension AppManager {
             if let error = error {
                 print("Error updating display name: \(error.localizedDescription)")
             } else {
-                print("Display name updated successfully to \(name)")
+                print("Display name updated successfully to \(String(describing: name))")
             }
         }
     }

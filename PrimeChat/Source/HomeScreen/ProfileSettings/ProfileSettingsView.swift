@@ -24,7 +24,7 @@ struct ProfileSettingsView: View {
                     ProfileImageView(imageUrl: selectedImageUrl)
                 }
                 .sheet(isPresented: $isImagePickerPresented) {
-                    ImagePicker(selectedImageUrl: $selectedImageUrl)
+                    ImagePicker(selectedImageUrl: $selectedImageUrl, imageType: .DisplayPicture)
                 }
                 HStack {
                     TextField("Type your message", text: $displayName)

@@ -30,7 +30,7 @@ struct ConversationListView: View {
         }
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
-                Image(systemName: "person")
+                ContactImageView(imageUrl: vm.contact.imageUrl)
             }
             ToolbarItem(placement: .principal) {
                 Text(vm.contact.displayName ?? vm.contact.emailId)

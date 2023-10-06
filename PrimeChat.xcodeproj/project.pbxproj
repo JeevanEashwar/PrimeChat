@@ -49,6 +49,10 @@
 		84EC53742ACF05C700287A7E /* AppManager+Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC53732ACF05C700287A7E /* AppManager+Storage.swift */; };
 		84EC53762ACF09C700287A7E /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC53752ACF09C700287A7E /* ImagePicker.swift */; };
 		84EC53782ACF135900287A7E /* ContactImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC53772ACF135900287A7E /* ContactImageView.swift */; };
+		84F1A2E72ACFDCC300CAA516 /* StatusViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F1A2E62ACFDCC300CAA516 /* StatusViewModal.swift */; };
+		84F1A2E92ACFDD6800CAA516 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F1A2E82ACFDD6800CAA516 /* Status.swift */; };
+		84F1A2ED2ACFEBF000CAA516 /* AppManager+Statuses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F1A2EC2ACFEBF000CAA516 /* AppManager+Statuses.swift */; };
+		84F1A2EF2AD00EC800CAA516 /* StatusPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F1A2EE2AD00EC800CAA516 /* StatusPreviewView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +114,10 @@
 		84EC53732ACF05C700287A7E /* AppManager+Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppManager+Storage.swift"; sourceTree = "<group>"; };
 		84EC53752ACF09C700287A7E /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		84EC53772ACF135900287A7E /* ContactImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactImageView.swift; sourceTree = "<group>"; };
+		84F1A2E62ACFDCC300CAA516 /* StatusViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViewModal.swift; sourceTree = "<group>"; };
+		84F1A2E82ACFDD6800CAA516 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		84F1A2EC2ACFEBF000CAA516 /* AppManager+Statuses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppManager+Statuses.swift"; sourceTree = "<group>"; };
+		84F1A2EE2AD00EC800CAA516 /* StatusPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusPreviewView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -272,6 +280,8 @@
 			isa = PBXGroup;
 			children = (
 				8473A89D2ACD7B9D005D84C7 /* StatusListView.swift */,
+				84F1A2E62ACFDCC300CAA516 /* StatusViewModal.swift */,
+				84F1A2EE2AD00EC800CAA516 /* StatusPreviewView.swift */,
 			);
 			path = Statuses;
 			sourceTree = "<group>";
@@ -290,6 +300,7 @@
 			children = (
 				8473A8AE2ACD9CE1005D84C7 /* MessageRecord.swift */,
 				8473A8B42ACDB48C005D84C7 /* Contact.swift */,
+				84F1A2E82ACFDD6800CAA516 /* Status.swift */,
 			);
 			path = Modals;
 			sourceTree = "<group>";
@@ -313,6 +324,7 @@
 				84EC53622ACEA1FB00287A7E /* AppManager+Messages.swift */,
 				84EC53642ACEA23800287A7E /* AppManager+Contacts.swift */,
 				84EC53732ACF05C700287A7E /* AppManager+Storage.swift */,
+				84F1A2EC2ACFEBF000CAA516 /* AppManager+Statuses.swift */,
 			);
 			path = AppManager;
 			sourceTree = "<group>";
@@ -467,6 +479,8 @@
 				8473A88A2ACD2EC4005D84C7 /* ChatBubbleView.swift in Sources */,
 				84EC53612ACEA19900287A7E /* AppManager+Authentication.swift in Sources */,
 				842531E52ACD11C40039699B /* ContentView.swift in Sources */,
+				84F1A2E92ACFDD6800CAA516 /* Status.swift in Sources */,
+				84F1A2E72ACFDCC300CAA516 /* StatusViewModal.swift in Sources */,
 				84EC53742ACF05C700287A7E /* AppManager+Storage.swift in Sources */,
 				846A54F82ACDDB69007F2418 /* ConversationListViewModal.swift in Sources */,
 				842531E32ACD11C40039699B /* PrimeChatApp.swift in Sources */,
@@ -485,6 +499,7 @@
 				8473A8872ACD245E005D84C7 /* SignUpView.swift in Sources */,
 				8473A8B12ACDB358005D84C7 /* AddContactView.swift in Sources */,
 				8473A88E2ACD3CF4005D84C7 /* LoginView.swift in Sources */,
+				84F1A2EF2AD00EC800CAA516 /* StatusPreviewView.swift in Sources */,
 				8473A8A42ACD8465005D84C7 /* FaceModal.swift in Sources */,
 				8473A8922ACD6153005D84C7 /* SignUpViewModal.swift in Sources */,
 				84EC53762ACF09C700287A7E /* ImagePicker.swift in Sources */,
@@ -492,6 +507,7 @@
 				8473A8812ACD18ED005D84C7 /* AppManager.swift in Sources */,
 				84EC53632ACEA1FB00287A7E /* AppManager+Messages.swift in Sources */,
 				84EC53782ACF135900287A7E /* ContactImageView.swift in Sources */,
+				84F1A2ED2ACFEBF000CAA516 /* AppManager+Statuses.swift in Sources */,
 				8473A8942ACD6BF1005D84C7 /* LoginViewModal.swift in Sources */,
 				8473A8B32ACDB3C6005D84C7 /* AddContactViewModal.swift in Sources */,
 				84EC53652ACEA23800287A7E /* AppManager+Contacts.swift in Sources */,

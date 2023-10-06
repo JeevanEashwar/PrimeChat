@@ -9,7 +9,7 @@ import Foundation
 import FirebaseFirestore
 
 /// Firebase FireStore methods - Messages
-typealias SendMessageCompletion = (Error?) -> Void
+typealias AddDocumentCompletion = (Error?) -> Void
 extension AppManager {
     static var dbManager: Firestore {
         Firestore.firestore()
@@ -19,7 +19,7 @@ extension AppManager {
         dbManager.collection("MessagesCollection")
     }
     
-    static func sendMessage(message: MessageRecord, completion: SendMessageCompletion? = nil) {
+    static func sendMessage(message: MessageRecord, completion: AddDocumentCompletion? = nil) {
         messagesCollectionRef.addDocument(data: message.dictionary, completion: completion)
     }
     
