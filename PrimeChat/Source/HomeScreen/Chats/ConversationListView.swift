@@ -10,19 +10,22 @@ import SwiftUI
 struct ConversationListView: View {
     @StateObject var vm: ConversationListViewModal
     var body: some View {
-        List {
-            let messagesSorted = vm.messages.sorted { lhs, rhs in
-                lhs.timeStamp < rhs.timeStamp
+        ScrollViewReader { scrollView in
+            List {
+                let messagesSorted = vm.messages.sorted { lhs, rhs in
+                    lhs.timeStamp < rhs.timeStamp
+                }
+                ForEach(messagesSorted, id: \.self.id) { item in
+                    let alignment = (item.receiverEmail == vm.contact.emailId) ? MessageAlignment.sent : MessageAlignment.received
+                    MessageCardView(message: item.message, timestamp: item.timeStamp.formattedString(), alignment: alignment)
+                        .listRowSeparator(.hidden)
+                }
             }
-            ForEach(messagesSorted, id: \.self.id) { item in
-                let alignment = (item.receiverEmail == vm.contact.emailId) ? MessageAlignment.sent : MessageAlignment.received
-                MessageCardView(message: item.message, timestamp: item.timeStamp.formattedString(), alignment: alignment)
-                    .listRowSeparator(.hidden)
-            }
-        }
-        .onAppear(){
-            Task {
-                await vm.loadConversations()
+            .onAppear(){
+                Task {
+                    await vm.loadConversations()
+                    scrollView.scrollTo(self.vm.messages.count - 1, anchor: .bottom)
+                }
             }
         }
         .toolbar {

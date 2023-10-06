@@ -48,4 +48,24 @@ extension AppManager {
         }
         return result
     }
+    
+    static func startListeningToMessagesCollection(toEmail: String, completion: @escaping (([MessageRecord]) -> Void)) {
+        let fromEmail: String = currentUserEmail
+        messagesCollectionRef
+            .whereField("senderEmail", in: [fromEmail, toEmail])
+            .whereField("receiverEmail", in: [fromEmail, toEmail])
+            .addSnapshotListener { querySnapshot, error in
+            guard let snapshot = querySnapshot else { return }
+            let messages = mapSnapshotToMessageRecords(snapshot: snapshot)
+            completion(messages)
+        }
+    }
+    
+    static func stopListeningToMessagesCollection(toEmail: String) {
+        let fromEmail: String = currentUserEmail
+        messagesCollectionRef
+            .whereField("senderEmail", in: [fromEmail, toEmail])
+            .whereField("receiverEmail", in: [fromEmail, toEmail])
+            .addSnapshotListener {_,_ in }
+    }
 }

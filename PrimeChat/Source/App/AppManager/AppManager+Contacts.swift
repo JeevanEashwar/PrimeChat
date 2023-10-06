@@ -77,7 +77,6 @@ extension AppManager {
         var result: [Contact] = []
         for document in snapshot.documents {
             let dictionary = document.data()
-            print(dictionary)
             result.append(Contact(from: dictionary))
         }
         return result

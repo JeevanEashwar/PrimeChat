@@ -22,5 +22,18 @@ class ConversationListViewModal: ObservableObject {
                 self.messages = fetchedMessages
             }
         }
+        startListeningForUpdates()
+    }
+    
+    func startListeningForUpdates() {
+        DispatchQueue.main.async {
+            AppManager.startListeningToMessagesCollection(toEmail: self.contact.emailId) { messages in 
+                self.messages = messages
+            }
+        }
+    }
+    
+    deinit {
+        AppManager.stopListeningToMessagesCollection(toEmail: contact.emailId)
     }
 }

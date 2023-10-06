@@ -26,7 +26,7 @@ struct SignUpView: View {
                             .keyboardType(.emailAddress)
                             .foregroundColor(Color(.accentColor))
                         
-                        SecureField("Password (minimum 4 characters)", text: $vm.password)
+                        SecureField("Password (minimum 6 characters)", text: $vm.password)
                             .foregroundColor(Color(.accentColor))
                     }
                 }
