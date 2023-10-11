@@ -14,13 +14,10 @@ struct ContentView: View {
         switch appState.authScreen {
         case .Login:
             LoginView()
-                .environmentObject(appState)
         case .SignUp:
             SignUpView()
-                .environmentObject(appState)
         case .HomeContainer:
             HomeContainerView()
-                .environmentObject(appState)
         }
     }
 }

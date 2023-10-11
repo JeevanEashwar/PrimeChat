@@ -31,7 +31,6 @@ struct HomeContainerView: View {
                     Text("Settings")
                 }
                 .accentColor(Color(.accentColor))
-                .environmentObject(appState)
         }
     }
 }
