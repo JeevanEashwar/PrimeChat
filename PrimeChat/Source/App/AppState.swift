@@ -11,7 +11,7 @@ import SwiftUI
 /// - Login: User can enter email and password to log into a session
 /// - Sign Up: Register using email and password
 /// - HomeContainer: Once loggedIn, this is the first screen the user is navigated to. This contains the User Chats, Account, Settings etc.,
-enum AuthenticationScreen {
+enum ScreenType {
     case Login
     case SignUp
     case HomeContainer
@@ -19,5 +19,5 @@ enum AuthenticationScreen {
 
 /// Managed applicaition state 
 class AppState: ObservableObject {
-    @Published var authScreen: AuthenticationScreen = .Login
+    @Published var authScreen: ScreenType = .Login
 }
